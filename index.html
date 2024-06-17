@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Organizational Chart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tree-container">
+        <div class="tree">
+            <ul>
+                <li>
+                    <a href="#" onclick="showPopup('UK Government')"><img src="gov_logo.png" alt="UK Government Logo">UK Government</a>
+                    <ul>
+                        <li>
+                            <a href="#" onclick="showPopup('NI Assembly')"><img src="NI_assembly_logo.svg" alt="NI Executive Logo">NI Assembly</a>
+                            <ul>
+                                <li>
+                                    <a href="#" onclick="showPopup('Department of Health')"><img src="Department_of_Health_NI_logo.svg.png" alt="Department of Health Logo">Department of Health</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#" onclick="showPopup('Health and Social Care Board')"><img src="HSCB-logo.jpg" alt="Health and Social Care Board Logo">Health and Social Care Board</a>
+                                            <ul>
+                                                <li><a href="#" onclick="showPopup('Belfast Health and Social Care Trust')"><img src="HSCB-logo.jpg" alt="Belfast Health and Social Care Trust Logo">Belfast Health and Social Care Trust</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="showPopup('Department for the Economy')"><img src="department_econ_logo.png" alt="Department for the Economy Logo">Department for the Economy</a>
+                                    <ul>
+                                        <li><a href="#" onclick="showPopup('Invest NI')"><img src="Invest_Northern_Ireland_logo.svg.png" alt="Invest NI Logo">Invest NI</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="showPopup('Department of Education')"><img src="Department_of_Education_NI_Logo.svg.png" alt="Department of Education Logo">Department of Education</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#" onclick="showPopup('Education Authority')"><img src="education_authority_logo.jpeg" alt="Education Authority Logo">Education Authority</a>
+                                            <ul>
+                                                <li><a href="#" onclick="showPopup('Belfast Education Authority')"><img src="education_authority_logo.jpeg" alt="Belfast Education Authority Logo">Belfast Education Authority</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+                                <li>
+                                    <a href="#" onclick="showPopup('Department of Communities')"><img src="department_comm_logo.png" alt="Department of Communities Logo">Department of Communities</a>
+                                    <ul>
+                                        <li><a href="#" onclick="showPopup('Child Maintenance Service')"><img src="department_comm_logo.png" alt="Child Maintenance Service Logo">Child Maintenance Service</a></li>
+                                        <li><a href="#" onclick="showPopup('Jobs and Benefits Offices')"><img src="department_comm_logo.png" alt="Jobs and Benefits Offices Logo">Jobs and Benefits Offices</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="showPopup('Department of Finance')"><img src="finance_logo.jpeg" alt="Department of Finance Logo">Department of Finance</a>
+                                    <ul>
+                                        <li><a href="#" onclick="showPopup('NI Statistics and Research Agency')"><img src="NISRA_logo.png" alt="NI Statistics and Research Agency Logo">NI Statistics and Research Agency</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="showPopup('Department of Justice')"><img src="justice_logo.png" alt="Department of Justice Logo">Department of Justice</a>
+                                    <ul>
+                                        <li><a href="#" onclick="showPopup('NI Prison Service')"><img src="Prison_logo.gif" alt="NI Prison Service Logo">NI Prison Service</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="showPopup('NI Executive')"><img src="NI_exec_logo.png" alt="Department of Justice Logo">NI Executive</a>
+                                    <ul>
+                                        <li> <a href="#" onclick="showPopup('Belfast City Council')"><img src="Belfast_council_logo.jpeg" alt="Belfast City Council Logo">Belfast City Council</a>
+                                    <ul>
+                                        <li><a href="#" onclick="showPopup('City Growth and Regeneration Committee')"><img src="Belfast_council_logo.jpeg" alt="City Growth and Regeneration Committee Logo">City Growth and Regeneration Committee</a></li>
+                                        <li><a href="#" onclick="showPopup('People and Communities Committee')"><img src="Belfast_council_logo.jpeg" alt="People and Communities Committee Logo">People and Communities Committee</a></li>
+                                        <li><a href="#" onclick="showPopup('Planning Committee')"><img src="Belfast_council_logo.jpeg" alt="Planning Committee Logo">Planning Committee</a></li>
+                                        <li><a href="#" onclick="showPopup('Strategic Policy and Resource Committee')"><img src="Belfast_council_logo.jpeg" alt="Strategic Policy and Resource Committee Logo">Strategic Policy and Resource Committee</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="hidePopup()">&times;</span>
+            <h2 id="popup-title"></h2>
+            <div id="popup-body">
+                <!-- Detailed information about the department will be displayed here -->
+            </div>
+            <button onclick="hidePopup()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
